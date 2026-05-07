@@ -1,37 +1,85 @@
-@model List<Catalogo.Models.Item>
+@model IEnumerable<Catalogo.Models.Item>
 
 @{
-    ViewData["Title"] = "Mi Catálogo";
+    ViewData["Title"] = "Catálogo";
 }
 
-<h1>Mi Catálogo</h1>
+<div class="content-panel">
+    <h1 class="page-title">Catálogo de Videojuegos</h1>
 
-<div>
-    <a asp-action="Index">Todos</a>
-    @if (ViewBag.Generos != null)
+    <p class="lead">
+        Bienvenido al archivo de la forja. Aquí puedes revisar los videojuegos registrados,
+        filtrarlos por género y consultar sus detalles.
+    </p>
+
+    <div class="d-flex flex-wrap gap-2 mb-4">
+        <a asp-controller="Catalogo" asp-action="Index" class="btn btn-outline-light custom-outline">
+            Todos
+        </a>
+
+        <a asp-controller="Catalogo" asp-action="Index" asp-route-genero="Acción" class="btn btn-outline-light custom-outline">
+            Acción
+        </a>
+
+        <a asp-controller="Catalogo" asp-action="Index" asp-route-genero="Aventura" class="btn btn-outline-light custom-outline">
+            Aventura
+        </a>
+
+        <a asp-controller="Catalogo" asp-action="Index" asp-route-genero="RPG" class="btn btn-outline-light custom-outline">
+            RPG
+        </a>
+
+        <a asp-controller="Catalogo" asp-action="Index" asp-route-genero="Deportes" class="btn btn-outline-light custom-outline">
+            Deportes
+        </a>
+
+        <a asp-controller="Catalogo" asp-action="Agregar" class="btn btn-primary ms-auto">
+            Agregar videojuego
+        </a>
+    </div>
+
+    <hr class="forge-divider" />
+
+    @if (!Model.Any())
     {
-        @foreach (var gen in ViewBag.Generos as List<string>)
-        {
-            <span> | </span>
-            <a asp-action="Index" asp-route-genero="@gen">@gen</a>
-        }
+        <div class="alert alert-dark border border-warning text-light">
+            No hay videojuegos disponibles en este momento.
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="catalog-card">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-3">@item.Genero</span>
+
+                            <h3 class="card-title">@item.Titulo</h3>
+
+                            <p class="card-text">
+                                <strong>Consola:</strong> @item.Consola
+                            </p>
+
+                            <p class="card-text">
+                                <strong>Año:</strong> @item.Ano
+                            </p>
+
+                            <p class="card-text">
+                                @item.Descripcion
+                            </p>
+
+                            <a asp-controller="Catalogo"
+                               asp-action="Detalle"
+                               asp-route-id="@item.Id"
+                               class="btn btn-secondary mt-2">
+                                Ver detalles
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
     }
 </div>
-
-<hr />
-
-<ul>
-    @foreach (var item in Model)
-    {
-        <li>
-            <strong>@item.Titulo</strong> -- @item.Genero (@item.Ano)
-            <br />
-            <a asp-action="Detalle" asp-route-id="@item.Id">Ver detalle</a>
-        </li>
-        <br />
-    }
-</ul>
-
-<hr />
-
-<a asp-action="Agregar" class="btn btn-primary">+ Agregar Videojuego</a>

@@ -21,7 +21,6 @@
 /home/avenkal/Catalogo/obj/Debug/net10.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /home/avenkal/Catalogo/obj/Debug/net10.0/scopedcss/bundle/Catalogo.styles.css
 /home/avenkal/Catalogo/obj/Debug/net10.0/scopedcss/projectbundle/Catalogo.bundle.scp.css
-/home/avenkal/Catalogo/obj/Debug/net10.0/compressed/xbfgin27xs-{0}-lugek5hnai-lugek5hnai.gz
 /home/avenkal/Catalogo/obj/Debug/net10.0/compressed/4uqa0yr62i-{0}-61n19gt1b8-61n19gt1b8.gz
 /home/avenkal/Catalogo/obj/Debug/net10.0/compressed/t6vi49e4bd-{0}-fr7q2aak1r-fr7q2aak1r.gz
 /home/avenkal/Catalogo/obj/Debug/net10.0/compressed/e5ty5vvaw7-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -95,3 +94,5 @@
 /home/avenkal/Catalogo/obj/Debug/net10.0/Catalogo.pdb
 /home/avenkal/Catalogo/obj/Debug/net10.0/Catalogo.genruntimeconfig.cache
 /home/avenkal/Catalogo/obj/Debug/net10.0/ref/Catalogo.dll
+/home/avenkal/Catalogo/obj/Debug/net10.0/Catalogo.sourcelink.json
+/home/avenkal/Catalogo/obj/Debug/net10.0/compressed/xbfgin27xs-{0}-ffdacdx02t-ffdacdx02t.gz

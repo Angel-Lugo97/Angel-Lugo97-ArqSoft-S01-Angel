@@ -1,20 +1,60 @@
 @model Catalogo.Models.Item
 
 @{
-    ViewData["Title"] = "Detalle - " + Model.Titulo;
+    ViewData["Title"] = "Detalle";
 }
 
-<h1>@Model.Titulo</h1>
+<div class="detail-panel">
+    <span class="hero-badge">REGISTRO DEL ARCHIVO</span>
 
-<div class="card" style="padding: 20px; border: 1px solid #444; border-radius: 8px;">
-    <p><strong>Género:</strong> @Model.Genero</p>
-    <p><strong>Consola:</strong> @Model.Consola</p>
-    <p><strong>Año:</strong> @Model.Ano</p>
-    <hr />
-    <p><strong>Descripción:</strong></p>
-    <p>@Model.Descripcion</p>
+    <h1 class="page-title">@Model.Titulo</h1>
+
+    <p class="lead">
+        Información completa del videojuego seleccionado dentro del catálogo.
+    </p>
+
+    <hr class="forge-divider" />
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="content-panel h-100">
+                <h3 class="section-title">Datos principales</h3>
+
+                <p>
+                    <strong>Género:</strong>
+                    <span class="badge bg-success">@Model.Genero</span>
+                </p>
+
+                <p>
+                    <strong>Consola:</strong>
+                    @Model.Consola
+                </p>
+
+                <p>
+                    <strong>Año:</strong>
+                    <span class="badge bg-warning">@Model.Ano</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="content-panel h-100">
+                <h3 class="section-title">Descripción</h3>
+
+                <p>
+                    @Model.Descripcion
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4 d-flex flex-wrap gap-2">
+        <a asp-controller="Catalogo" asp-action="Index" class="btn btn-primary">
+            Volver al catálogo
+        </a>
+
+        <a asp-controller="Catalogo" asp-action="Agregar" class="btn btn-outline-light custom-outline">
+            Agregar otro
+        </a>
+    </div>
 </div>
-
-<br />
-
-<a asp-action="Index" class="btn btn-secondary">← Volver al Catálogo</a>
