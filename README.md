@@ -6,17 +6,19 @@ Este proyecto es una aplicación web desarrollada con **ASP.NET Core MVC** dise�
 
 ## 👤 Datos del Estudiante
 
-| Campo | Información |
-| :--- | :--- |
-| **Nombre** | [Tu Nombre] |
-| **Matrícula** | [Tu Matrícula] |
-| **Universidad** | [Nombre de la Universidad] |
-| **Profesor** | [Nombre del Profesor] |
-| **Materia** | [Nombre de la Materia] |
+| Campo | Información                     |
+| :--- |:--------------------------------|
+| **Nombre** | Angel Abraham Lugo Saenz        |
+| **Matrícula** | SW2409052                       |
+| **Universidad** | Tecnologico de software         |
+| **Profesor** | Jorge Javier Pedroza Romero     |
+| **Materia** | Arquitectura de software        |
 | **Tarea** | Catálogo de Videojuegos con MVC |
 
 ---
 
+
+---
 ## 📝 Descripción General
 
 La aplicación permite visualizar una lista de videojuegos, consultar detalles específicos, filtrarlos por género y registrar nuevos títulos mediante formularios. El enfoque principal fue el dominio del patrón **Modelo-Vista-Controlador (MVC)**.
@@ -59,8 +61,9 @@ Filtrado Dinámico: Botones para segmentar juegos por categoría.
 Detalles Extendidos: Vista dedicada para profundizar en la información.
 
 Registro de Juegos: Formulario funcional para añadir nuevos elementos.
+```
 
-🛠️ Comandos de Uso
+# 🛠️ Comandos de Uso
 Desarrollo con .NET
 Bash
 # Restaurar dependencias
@@ -120,3 +123,10 @@ Este proyecto representa la integración de lógica de backend con diseño creat
 
 
 **Tip:** Asegúrate de que el archivo en el que pegas esto tenga la extensión `.md` (ejemplo: `README.md`). Si usas el editor de GitHub directamente, usa la pestaña **"Edit"** para pegar el código y luego revisa en **"Preview"** que se vea bien.
+
+
+# Clausula de IA
+```
+Yo Angel Abraham Lugo Saenz declaro que utilice IA,
+para realizar mi README.
+```
